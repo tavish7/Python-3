@@ -1,6 +1,6 @@
 """
-Hey, we are going to find an exciting number called Catalan number which is use to find
-the number of possible binary search trees from tree of a given number of nodes.
+Hey, we are going to find an exciting number called Catalan number which can be used to
+calculate the number of possible binary search trees from tree of n nodes.
 
 We will use the formula: t(n) = SUMMATION(i = 1 to n)t(i-1)t(n-i)
 
