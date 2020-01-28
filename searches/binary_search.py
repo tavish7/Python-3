@@ -27,16 +27,12 @@ def bisect_left(sorted_collection, item, lo=0, hi=None):
     Examples:
     >>> bisect_left([0, 5, 7, 10, 15], 0)
     0
-
     >>> bisect_left([0, 5, 7, 10, 15], 6)
     2
-
     >>> bisect_left([0, 5, 7, 10, 15], 20)
     5
-
     >>> bisect_left([0, 5, 7, 10, 15], 15, 1, 3)
     3
-
     >>> bisect_left([0, 5, 7, 10, 15], 6, 2)
     2
     """
@@ -68,16 +64,12 @@ def bisect_right(sorted_collection, item, lo=0, hi=None):
     Examples:
     >>> bisect_right([0, 5, 7, 10, 15], 0)
     1
-
     >>> bisect_right([0, 5, 7, 10, 15], 15)
     5
-
     >>> bisect_right([0, 5, 7, 10, 15], 6)
     2
-
     >>> bisect_right([0, 5, 7, 10, 15], 15, 1, 3)
     3
-
     >>> bisect_right([0, 5, 7, 10, 15], 6, 2)
     2
     """
@@ -110,7 +102,6 @@ def insort_left(sorted_collection, item, lo=0, hi=None):
     >>> insort_left(sorted_collection, 6)
     >>> sorted_collection
     [0, 5, 6, 7, 10, 15]
-
     >>> sorted_collection = [(0, 0), (5, 5), (7, 7), (10, 10), (15, 15)]
     >>> item = (5, 5)
     >>> insort_left(sorted_collection, item)
@@ -120,12 +111,10 @@ def insort_left(sorted_collection, item, lo=0, hi=None):
     True
     >>> item is sorted_collection[2]
     False
-
     >>> sorted_collection = [0, 5, 7, 10, 15]
     >>> insort_left(sorted_collection, 20)
     >>> sorted_collection
     [0, 5, 7, 10, 15, 20]
-
     >>> sorted_collection = [0, 5, 7, 10, 15]
     >>> insort_left(sorted_collection, 15, 1, 3)
     >>> sorted_collection
@@ -150,7 +139,6 @@ def insort_right(sorted_collection, item, lo=0, hi=None):
     >>> insort_right(sorted_collection, 6)
     >>> sorted_collection
     [0, 5, 6, 7, 10, 15]
-
     >>> sorted_collection = [(0, 0), (5, 5), (7, 7), (10, 10), (15, 15)]
     >>> item = (5, 5)
     >>> insort_right(sorted_collection, item)
@@ -160,12 +148,10 @@ def insort_right(sorted_collection, item, lo=0, hi=None):
     False
     >>> item is sorted_collection[2]
     True
-
     >>> sorted_collection = [0, 5, 7, 10, 15]
     >>> insort_right(sorted_collection, 20)
     >>> sorted_collection
     [0, 5, 7, 10, 15, 20]
-
     >>> sorted_collection = [0, 5, 7, 10, 15]
     >>> insort_right(sorted_collection, 15, 1, 3)
     >>> sorted_collection
@@ -187,13 +173,10 @@ def binary_search(sorted_collection, item):
     Examples:
     >>> binary_search([0, 5, 7, 10, 15], 0)
     0
-
     >>> binary_search([0, 5, 7, 10, 15], 15)
     4
-
     >>> binary_search([0, 5, 7, 10, 15], 5)
     1
-
     >>> binary_search([0, 5, 7, 10, 15], 6)
 
     """
@@ -225,13 +208,10 @@ def binary_search_std_lib(sorted_collection, item):
     Examples:
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 0)
     0
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 15)
     4
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 5)
     1
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 6)
 
     """
@@ -256,13 +236,10 @@ def binary_search_by_recursion(sorted_collection, item, left, right):
     Examples:
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 0)
     0
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 15)
     4
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 5)
     1
-
     >>> binary_search_std_lib([0, 5, 7, 10, 15], 6)
 
     """
@@ -289,7 +266,6 @@ def __assert_sorted(collection):
     Examples:
     >>> __assert_sorted([0, 1, 2, 4])
     True
-
     >>> __assert_sorted([10, -1, 5])
     Traceback (most recent call last):
     ...
@@ -310,8 +286,7 @@ if __name__ == "__main__":
     except ValueError:
         sys.exit("Sequence must be ascending sorted to apply binary search")
 
-    target_input = input("Enter a single number to be found in the list:\n")
-    target = int(target_input)
+    target = int(input("Enter a single number to be found in the list:\n").strip())
     result = binary_search(collection, target)
     if result is not None:
         print(f"{target} found at positions: {result}")
