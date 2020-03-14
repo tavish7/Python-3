@@ -14,11 +14,9 @@ jobs:
         run: |
           scripts/build_directory_md.py 2>&1 | tee DIRECTORY.md
           git config --global user.name "GitHub Actions"
-          git config --global user.email 'action@github.com'
+          git config --global user.email "action@github.com"
           git commit -am "updating DIRECTORY.md" ||  true
       - name: Push DIRECTORY.md
         if: github.ref == 'refs/heads/master'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
+        run: |
+          git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git" HEAD:${master} --force
