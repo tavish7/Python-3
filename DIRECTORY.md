@@ -73,6 +73,8 @@
   * [Decimal To Octal](https://github.com/TheAlgorithms/Python/blob/master/conversions/decimal_to_octal.py)
   * [Roman To Integer](https://github.com/TheAlgorithms/Python/blob/master/conversions/roman_to_integer.py)
 
+## [Crazy-World](https://github.com/TheAlgorithms/Python/blob/master//crazy-world.py)
+
 ## Data Structures
   * Binary Tree
     * [Avl Tree](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/avl_tree.py)
